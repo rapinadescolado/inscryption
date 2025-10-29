@@ -15,8 +15,8 @@
 body {
     background-color: var(--bg);
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: 200vh;
+    overflow-x: hidden;
 }
 
 .coolpixel {
@@ -60,7 +60,19 @@ body {
 
 
 /* CONTENT */
+#swipe-down-msg {
+    position: absolute;
+    top: 45vh;
+    width: 100vw;
+    text-align: center;
+    color: white;
+    font-size: 8vw;
+    letter-spacing: 0.2vw;
+}
+
 #main-screen {
+    position: relative;
+    top: 100vh;
     width: 100vw;
     height: 100vh;
     padding: 8vw;
