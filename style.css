@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Tiny5&display=swap');
+
+:root {
+    --pri: #584838;
+    --sec: #3b2e20;
+    --bg: #2b2219;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.coolpixel {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+.regular {
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+}
+
+
+
+/* ORIENTATION CHECK SCREEN */
+#orientation-check-screen {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #382c25;
+    width: 100vw;
+    height: 100vh;
+    padding: 20vw;
+    z-index: 100;
+}
+#orientation-check-screen img {
+    position: absolute;
+    opacity: 0.4;
+    width: 60vw;
+}
+#orientation-check-screen h2 {
+    color: white;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 00;
+    letter-spacing: 0.3vw;
+    z-index: 100;
+}
+
+
+
+/* CONTENT */
+#main-screen {
+    width: 100vw;
+    height: 100vh;
+    padding: 8vw;
+}
+#content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 25% 50% 25%;
+    background-color: var(--pri);
+    width: 100%;
+    height: 100%;
+    border: white 0.5vw solid;
+    border-radius: 5vw;
+    padding: 5vw;
+}
+
+.point-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec);
+    height: 80%;
+    border: 0.5vw white solid;
+    border-radius: 10vw;
+    margin: auto;
+    aspect-ratio: 1/1;
+    transform: rotate(90deg);
+}
+.point-button p {
+    text-align: center;
+    color: white;
+    font-size: 15vw;
+    letter-spacing: 1vw;
+}
+
+#counter {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: var(--bg);
+    border: 0.5vw white solid;
+}
+
+#bellring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    margin: auto;
+    transform: rotate(90deg);
+}
+#bellring img {
+    width: 100%;
+}
+#bellring h3 {
+    position: absolute;
+    background-color: white;
+    padding: 3vw;
+    border: 0.5vw black solid;
+    border-radius: 10vw;
+    text-align: center;
+    color: var(--bg);
+    font-size: 8vw;
+    font-weight: 900;
+    aspect-ratio: 10/3;
+}
