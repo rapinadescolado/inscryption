@@ -14,14 +14,9 @@
 
 <body>
 
-    <div id="orientation-check-screen">
-        <img src="assets/inscryptionpaw.png">
-        <h2 id="orientation-check-text" class="regular">...</h2>
-    </div>
-
     <h2 id="swipe-down-msg" class="coolpixel">Deslize a tela para cima...</h2>
 
-    <div id="main-screen">
+    <div id="main-screen" class="screen">
         <div id="content">
 
             <div id="positive-point-button" class="point-button">
@@ -30,7 +25,7 @@
             <div id="counter"></div>
             <div id="bellring">
                 <img src="assets/bellring.png">
-                <h3 id="rounds" class="regular">00</h3>
+                <h3 id="rounds" class="regular">0</h3>
             </div>
             <div id="negative-point-button" class="point-button">
                 <p class="coolpixel">+</p>
@@ -39,6 +34,17 @@
         </div>
     </div>
 
+    <div id="gameover-screen" class="screen">
+        <div id="stats">
+            <h2 id="winner" class="regular">VENCEDOR</h2>
+            <p id="gametime" class="regular">00:00</p>
+        </div>
+    </div>
+
+    <div id="orientation-check-screen" class="screen">
+        <img src="assets/inscryptionpaw.png">
+        <h2 id="orientation-check-text" class="regular">...</h2>
+    </div>
 
 </body>
 
