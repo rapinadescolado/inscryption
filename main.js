@@ -50,3 +50,47 @@ setTimeout(() => {
 
 
 
+
+
+// COUNTER CODE
+const counter = document.getElementById("counter");
+const positivePoint = document.getElementById("positive-point-button");
+const negativePoint = document.getElementById("negative-point-button");
+var score = 0;
+var currentPlayer = 1
+    
+function reloadCounter() {
+
+    // Delete all the points
+    let points = 0;
+    while (counter.firstChild) {
+        counter.removeChild(counter.firstChild);
+    }
+    // Check the counter orientation
+    if (score < 0) {
+        points = score * -1;
+        counter.style.transform = "rotate(180deg)";
+    } else if (score > 0) {
+        points = score;
+        counter.style.transform = "rotate(0deg)";
+    }
+    // Add the points
+    for (let i = 0; i < points; i++) {
+        let element = document.createElement("div");
+        element.classList.add("counter-point");
+        counter.appendChild(element);
+    }
+    
+}
+function setScore(newScore) {
+    score = newScore;
+    reloadCounter();
+}
+
+// Positive and Negative Points
+positivePoint.addEventListener("click", (event) => {
+    setScore(score + 1);
+})
+negativePoint.addEventListener("click", (event) => {
+    setScore(score - 1);
+})

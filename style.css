@@ -33,7 +33,9 @@ body {
 
 /* ORIENTATION CHECK SCREEN */
 #orientation-check-screen {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
     justify-content: center;
     align-items: center;
@@ -105,7 +107,7 @@ body {
 .point-button p {
     text-align: center;
     color: white;
-    font-size: 15vw;
+    font-size: 25vw;
     letter-spacing: 1vw;
 }
 
@@ -118,6 +120,12 @@ body {
     grid-row-end: 4;
     background-color: var(--bg);
     border: 0.5vw white solid;
+    transition: transform 0.3s ease-in-out;
+}
+.counter-point {
+    background-color: white;
+    border-radius: 3vw;
+    margin: 1vw;
 }
 
 #bellring {
