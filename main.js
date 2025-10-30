@@ -78,15 +78,22 @@ function reloadCounter() {
     for (let i = 0; i < points; i++) {
         let element = document.createElement("div");
         element.classList.add("counter-point");
+        if (winner > 0) {
+            element.classList.add("golden");
+        } else {
+            element.classList.add("red");
+        }
         pointsCounter.appendChild(element);
     }
     
 }
 function setScore(newScore) {
-    let sound = new Audio("assets/audio/point.mp3").play();
+    let sound = new Audio("assets/audio/point.mp3")
+    sound.volume = 0.6;
+    sound.play();
     score = newScore;
-    reloadCounter();
     checkWinner();
+    reloadCounter();
 }
 function checkWinner() {
     if (score > 0) {

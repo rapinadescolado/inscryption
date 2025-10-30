@@ -127,6 +127,12 @@ body {
     border-radius: 3vw;
     margin: 1vw;
 }
+.counter-point.golden {
+    border: 0.5vw #f7d154 solid;
+}
+.counter-point.red {
+    border: 0.5vw #9c1212 solid;
+}
 
 #bellring {
     display: flex;
